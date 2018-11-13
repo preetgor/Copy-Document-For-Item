@@ -5,7 +5,7 @@ OBJECT Page 50506 Item Prerequisite Card
     Date=09/20/18;
     Time=12:00:00 PM;
     Modified=Yes;
-    Version List=T8900,T09877;
+    Version List=T09877;
   }
   PROPERTIES
   {
@@ -582,6 +582,8 @@ OBJECT Page 50506 Item Prerequisite Card
 
     BEGIN
     {
+    Preet Gor
+    T02268 : Add a Function - CopyItem_gFnc for Copy Document call it from New Action "CopyDocument".
     }
     END.
   }
