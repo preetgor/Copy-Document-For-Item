@@ -533,6 +533,7 @@ OBJECT Page 50506 Item Prerequisite Card
         ItemNo_lCod := "No.";
         IF PAGE.RUNMODAL(0,Item_lRec) = ACTION::LookupOK THEN BEGIN
           TRANSFERFIELDS(Item_lRec,FALSE);
+          //Reset Values of Item Field - NS
           "No." := ItemNo_lCod;
           "Base Unit of Measure" := '';
           "Sales Unit of Measure" := '';
@@ -549,13 +550,15 @@ OBJECT Page 50506 Item Prerequisite Card
           "Re-Open By" := '';
           "Re-Open DateTime" := 0DT;
           "Approver By" := '';
-          "Prerequisite Item" := TRUE;
+          "Prerequisite Item" := TRUE;          
           MODIFY;
+          //Delete All "Item Unit of Measure" Data  - NS
           IUM_lRec.RESET;
           IUM_lRec.SETRANGE("Item No.",ItemNo_lCod);
           IF IUM_lRec.FINDSET THEN BEGIN
             IUM_lRec.DELETEALL(FALSE);
           END;
+          //Insert "Item Unit of Measure" Data  - NS
           IUM3_lRec.RESET;
           IUM3_lRec.SETRANGE("Item No.",Item_lRec."No.");
           IF IUM3_lRec.FINDSET THEN BEGIN
