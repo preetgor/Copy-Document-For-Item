@@ -537,10 +537,8 @@ OBJECT Page 50506 Item Prerequisite Card
           "Base Unit of Measure" := '';
           "Sales Unit of Measure" := '';
           "Purch. Unit of Measure" :='';
-          //ContactEdit-NS
           "Created Date" := xRec."Created Date";
           "Created By" := xRec."Created By";
-          //ContactEdit-NE
           VALIDATE("Unit Cost",0);
           Description := '';
           "Description 2" := '';
