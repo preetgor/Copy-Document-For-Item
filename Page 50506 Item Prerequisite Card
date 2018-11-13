@@ -5,7 +5,7 @@ OBJECT Page 50506 Item Prerequisite Card
     Date=09/20/18;
     Time=12:00:00 PM;
     Modified=Yes;
-    Version List=T09877;
+    Version List=T02268;
   }
   PROPERTIES
   {
@@ -103,7 +103,7 @@ OBJECT Page 50506 Item Prerequisite Card
                       Image=CopyDocument;
                       PromotedCategory=Process;
                       OnAction=BEGIN
-                                 CopyItem_gFnc;  //T09877-N
+                                 CopyItem_gFnc;  //T02268-N
                                END;
                                 }
       { 129     ;2   ;ActionGroup;
